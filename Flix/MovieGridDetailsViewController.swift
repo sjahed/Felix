@@ -18,6 +18,12 @@ class MovieGridDetailsViewController: UIViewController {
     @IBOutlet weak var synopsisLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     
+//    @IBAction func posterTap(_ sender: UITapGestureRecognizer) {
+//
+//       print("somebody tapped!", sender)
+//    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -33,17 +39,27 @@ class MovieGridDetailsViewController: UIViewController {
 
         posterView.af.setImage(withURL: posterUrl!)
         backdropView.af.setImage(withURL: backdropUrl!)
+        
+
+//        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(posterTap(_:)))
+//        tapGesture.numberOfTapsRequired = 2
+//        posterView.addGestureRecognizer(tapGesture)
+        
     }
     
 
-    /*
+
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        
+        let trailerViewController = segue.destination as! TrailerViewController
+        trailerViewController.movieId = movie["id"]
+        
     }
-    */
+    
 
 }
