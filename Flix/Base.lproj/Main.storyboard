@@ -292,15 +292,19 @@
                                     <constraint firstAttribute="width" constant="390" id="JBx-XB-R7D"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cr0-2z-2HO">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cr0-2z-2HO">
                                 <rect key="frame" x="0.0" y="212" width="194" height="323"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="194" id="2cw-4T-XSD"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="323" id="4tG-SU-2nu"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="194" id="Xki-ZZ-6tE"/>
                                     <constraint firstAttribute="height" constant="323" id="oV1-pc-Buy"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="sWY-5w-ORJ" appends="YES" id="Xze-he-gWs"/>
+                                </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vqO-hg-c3A">
                                 <rect key="frame" x="202" y="421" width="172" height="30"/>
@@ -356,8 +360,28 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9gj-Fn-Bqu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="sWY-5w-ORJ">
+                    <connections>
+                        <segue destination="kIE-za-ayR" kind="presentation" id="XI6-6t-usT"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1004.6153846153845" y="1657.81990521327"/>
+        </scene>
+        <!--TrailersViewController-->
+        <scene sceneID="gWZ-6z-Z3E">
+            <objects>
+                <viewController title="TrailersViewController" id="kIE-za-ayR" customClass="TrailerViewController" customModule="Flix" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="V8U-DD-xBR">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="4t3-8g-87o"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wvw-mo-Tam" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2228" y="1658"/>
         </scene>
     </scenes>
     <resources>
@@ -376,6 +400,9 @@
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
